@@ -14,7 +14,7 @@ permissions:
 jobs:
    api_check:
       runs-on: ubuntu-latest
-      if: github.repository == 'kotest/kotest'
+      if: github.repository == 'kshired/kotest'
       steps:
          -  name: Checkout the repo
             uses: actions/checkout@v3
@@ -36,7 +36,7 @@ jobs:
    test_linux:
       needs: api_check
       runs-on: ubuntu-latest
-      if: github.repository == 'kotest/kotest'
+      if: github.repository == 'kshired/kotest'
       strategy:
          matrix:
             target:
@@ -76,7 +76,7 @@ jobs:
    test_mac:
       needs: test_linux
       runs-on: macos-latest
-      if: github.repository == 'kotest/kotest'
+      if: github.repository == 'kshired/kotest'
       strategy:
          fail-fast: true
          matrix:
@@ -118,7 +118,7 @@ jobs:
    test_windows:
       needs: api_check
       runs-on: windows-latest
-      if: github.repository == 'kotest/kotest'
+      if: github.repository == 'kshired/kotest'
       strategy:
          fail-fast: true
          matrix:
