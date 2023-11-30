@@ -14,7 +14,7 @@ permissions:
 jobs:
    api_check:
       runs-on: ubuntu-latest
-      if: github.repository == 'kotest/kotest'
+      if: github.repository == 'kshired/kotest'
       steps:
          -  name: Checkout the repo
             uses: actions/checkout@v3
